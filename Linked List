@@ -1,0 +1,26 @@
+#Membuat class Node untuk mempresentasikan setiap node dalam linked list
+class Node:
+  def_init_(self, data, harga):
+     self.data = data
+     self.harga = harga
+     self.next = None
+
+#Membuat class Linkedlist untuk mempresentasikan linked list secara keseluruhan 
+class MenuLinkedList:
+    def_init_(self):
+       self.head = None
+
+    #Menambahkan node baru di awal linked list 
+    def tambah_awal(self, data, harga):
+        new_code = Node(data, harga)
+        new_node.next = self.head
+        self.head = new_node
+
+    #Menampilkan isi Linked List (menu makanan beserta harga)
+    def tampilkan_menu(self):
+        current = self.head
+        while current:
+            print(f"{current.data} Rp.{current.harga}")
+            current = current.next 
+
+
