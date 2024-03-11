@@ -50,3 +50,23 @@ def pesan_makanan(menu):
         print("===== (Ketik 'selesai' untuk menyelesaikan pesanan) =====")
         print(f"||>> {current.data} sebanyak {jumlah} sudah ditambahkan ke keranjang <<||")
     return pesanan, total_harga
+
+menu_makanan = MenuLinkedList()
+menu_makanan.tambah_awal("Mixue Ice Cream", 5000)
+menu_makanan.tambah_awal("Boba Shake", 16000)
+menu_makanan.tambah_awal("Mi Sundae", 14000)
+menu_makanan.tambah_awal("Mi Ganas", 11000)
+menu_makanan.tambah_awal("Creamy Mango Boba", 22000)
+
+print("\n            SELAMAT DATANG DI E-ORDER WARUNG D4 MI     ")
+print("        ICE CREAM DAN MIE PEDAS TERSEDIA DI WARUNG INI ")
+print(" ")
+print("--------------------------")
+print(" DAFTAR MENU WARUNG D4 MI ")
+print("--------------------------\n")
+menu_makanan.tampilkan_menu()
+
+pesanan, total_harga = pesan_makanan(menu_makanan)
+print("\n|| Pesanan Anda ||\n", pesanan)
+print("Total Harga yang harus dibayarkan: Rp. ", total_harga, "\n")
+print("------ Terima Kasih telah E-Order di Warung Kami ------\n")
